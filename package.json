@@ -1,6 +1,6 @@
 {
   "name": "@agilatech/versalink-mpu9250-device",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "MPU9250 device driver for use in the Agilatech VersaLink system",
   "main": "mpu9250-scout.js",
   "directories": {
