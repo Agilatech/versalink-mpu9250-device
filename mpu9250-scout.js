@@ -1,8 +1,6 @@
-
 const config = require('./config');
-
-const Scout = require('zetta-scout');
-const Mpu = require('./mpu');
+const Scout = require(process.versalink.scout);
+const Mpu = require('./mpu9250');
 
 module.exports = class MpuScout extends Scout {
 
@@ -22,7 +20,7 @@ module.exports = class MpuScout extends Scout {
     if (config.name === undefined) { config.name = "MPU9250" }
     this.name = config.name;
 
-    this.mpu = new Mpu(config);
+    this.mpu9250 = new Mpu(config);
 
   }
 
@@ -34,10 +32,10 @@ module.exports = class MpuScout extends Scout {
     this.server.find(query, function(err, results) {
       if (!err) {
         if (results[0]) {
-          self.provision(results[0], self.mpu);
+          self.provision(results[0], self.mpu9250);
           self.server.info('Provisioned known device ' + self.name);
         } else {
-          self.discover(self.mpu);
+          self.discover(self.mpu9250);
           self.server.info('Discovered new device ' + self.name);
         }
       }

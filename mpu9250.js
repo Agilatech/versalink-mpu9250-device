@@ -1,6 +1,5 @@
-
-const VersalinkDevice = require('@agilatech/versalink-device');
-const device = require('@agilatech/mpu');
+const VersalinkDevice = require(process.versalink.device);
+const device = require('@agilatech/mpu9250');
 
 module.exports = class Mpu extends VersalinkDevice {
     

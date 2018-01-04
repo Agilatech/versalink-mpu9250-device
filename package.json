@@ -3,11 +3,9 @@
   "version": "0.8.1",
   "description": "MPU9250 device driver for use in the Agilatech VersaLink system",
   "main": "mpu9250-scout.js",
-  "directories": {
-    "example": "example"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Agilatech/versalink-mpu9250-device.git"
   },
   "keywords": [
     "sensor",
@@ -16,9 +14,8 @@
     "mpu"
   ],
   "author": "Agilatech <scott@agilatech.com> (http://agilatech.com)",
-  "license": "SEE LICENSE in LICENSE",
+  "license": "MIT",
   "dependencies": {
-    "@agilatech/versalink-device": "*",
-    "zetta-scout": "*"
+    "@agilatech/mpu9250": "*"
   }
 }
